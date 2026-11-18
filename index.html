@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Malek Zitouni — NLP / LLM Engineer</title>
+  <meta name="description" content="NLP / LLM engineer adapting language models to low-resource languages. Co-author of the Wolof-adapted open-weight models released by Orange (arXiv:2610.20824). INSAT engineering graduate, open to relocation." />
+  <meta name="author" content="Malek Zitouni" />
+  <meta name="theme-color" content="#060913" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Malek Zitouni — NLP / LLM Engineer" />
+  <meta property="og:description" content="Tokenizer adaptation, LLM fine-tuning on HPC, RAG and multimodal AI. Co-author of the Wolof-adapted open-weight models (arXiv:2610.20824)." />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Malek Zitouni",
+    "jobTitle": "NLP / LLM Engineer",
+    "address": { "@type": "PostalAddress", "addressLocality": "Tunis", "addressCountry": "TN" },
+    "alumniOf": "INSAT, Tunisia",
+    "sameAs": [
+      "https://www.linkedin.com/in/malek-zitounii/",
+      "https://github.com/malekzitouni",
+      "https://arxiv.org/abs/2610.20824"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="Malek Zitouni — home">
+      <img src="/assets/malek-sm.webp" alt="" width="34" height="34" />
+      <span>Malek Zitouni</span>
+    </a>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-small" href="/assets/Malek_Zitouni_CV.pdf" target="_blank" rel="noopener">Resume</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="links"><span></span><span></span></button>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true"><i class="orb o1"></i><i class="orb o2"></i><i class="grid"></i></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="badge"><span class="pulse"></span> Open to opportunities · Tunis · Open to relocation</p>
+          <h1>Malek <span class="grad">Zitouni</span></h1>
+          <p class="role"><span id="typed" aria-live="off"></span><span class="caret"></span></p>
+          <p class="lead">NLP / LLM engineer who adapts language models to low-resource languages. Co-author of the Wolof-adapted open-weight models released by Orange — from tokenizer surgery and HPC fine-tuning to large-scale evaluation.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#research">Read the paper</a>
+            <a class="btn" href="/assets/Malek_Zitouni_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+          <ul class="socials" aria-label="Profiles">
+            <li><a href="https://github.com/malekzitouni" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/malek-zitounii/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://arxiv.org/abs/2610.20824" target="_blank" rel="noopener">arXiv</a></li>
+            <li><a href="https://huggingface.co/collections/Orange/wolof-lm" target="_blank" rel="noopener">Hugging Face</a></li>
+          </ul>
+        </div>
+
+        <div class="lab glass" id="lab">
+          <div class="lab-head">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="lab-title">tokenizer_lab.py</span>
+            <span class="lab-tag">illustrative</span>
+          </div>
+          <p class="lab-label">Input · Wolof</p>
+          <p class="lab-sentence" lang="wo">Naka nga def? Maa ngi fi rekk, jërëjëf.</p>
+          <div class="seg" role="group" aria-label="Vocabulary mode">
+            <button class="on" data-mode="generic" aria-pressed="true">Generic vocabulary</button>
+            <button data-mode="adapted" aria-pressed="false">Wolof-adapted</button>
+          </div>
+          <div class="tokens" id="tokens" aria-live="polite"></div>
+          <div class="lab-foot">
+            <span><b id="tokCount">0</b> tokens</span>
+            <span id="tokNote" class="muted"></span>
+          </div>
+          <p class="fineprint">Conceptual illustration of vocabulary extension — not real tokenizer output.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats wrap" aria-label="Highlights">
+      <div class="stat"><b>0.6B–14B</b><span>open-weight Wolof models, publicly released</span></div>
+      <div class="stat"><b><i data-count="35">0</i>+</b><span>Wolof evaluation tasks</span></div>
+      <div class="stat"><b><i data-count="3">0</i></b><span>AI internships — NLP, GenAI, 3D vision</span></div>
+      <div class="stat"><b><i data-count="1">0</i></b><span>paper on arXiv (cs.CL)</span></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about wrap reveal" id="about">
+      <div class="about-photo"><img src="/assets/malek.webp" alt="Malek Zitouni in graduation gown at INSAT" width="360" height="360" loading="lazy" /></div>
+      <div class="about-copy">
+        <p class="eyebrow">About</p>
+        <h2>Learning at high intensity, shipping reliable AI.</h2>
+        <p>I’m a Tunisian AI engineer, freshly graduated from INSAT (October 2026) with a specialization in machine learning, data science and intelligent automation. I thrive on complex domain problems: I read the empirical data, iterate on what the numbers say, and turn business problems into production-ready AI.</p>
+        <p>My recent work sits at the heart of LLM adaptation — extending tokenizers, initializing new embeddings, running continued pre-training and instruction tuning on an HPC cluster, and measuring the result on dozens of tasks. Before that: document-understanding pipelines for finance, RAG for healthcare, and 3D deep learning on LiDAR point clouds.</p>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="research wrap reveal" id="research">
+      <p class="eyebrow">Featured research</p>
+      <h2>Publication</h2>
+      <article class="paper glass spot">
+        <div class="paper-top">
+          <span class="chip chip-amber">arXiv:2610.20824</span>
+          <span class="chip">cs.CL</span><span class="chip">cs.AI</span>
+          <span class="chip">Submitted 14 Oct 2026</span>
+          <span class="chip">Orange Research</span>
+        </div>
+        <h3>Wolof-Adapted Industry-Ready Open-Weight Language Models</h3>
+        <p class="authors">Gwénolé Lecorvé, Delphine Charlet, Pierre Adam, Floriane Behanzin, Lionel Delphin-Poulat, Johannes Heinecke, Géraldine Damnati, Pelin Kaytmaz, Nourredine Khaous, Charbel Kindji, Meriam Maadi, Abdoulaye Mbaye, Claire Perroux, Ismaël Rousseau, Papa Séga Wadé, Gilles Xiberras, Olivier Zhang, <b>Malek Zitouni</b></p>
+
+        <div class="paper-grid">
+          <div>
+            <h4>What it’s about</h4>
+            <p>Wolof is spoken by about 23 million people, mostly in Senegal, yet open-weight language models support it poorly — and API-only models raise cost, governance and sovereignty concerns for local deployments. The paper presents open-weight models from 0.6B to 14B parameters adapted to Wolof through instruction tuning, preference alignment and model merging. They are being evaluated in internal customer-care pilots and are publicly available.</p>
+          </div>
+          <div>
+            <h4>My contribution</h4>
+            <ul class="ticks">
+              <li>Tokenizer adaptation and vocabulary extension for Wolof on Qwen2.5-7B</li>
+              <li>Embedding initialization for new rows: mean, random and CW2V</li>
+              <li>CPT and instruction-tuning pipelines on HPC with DeepSpeed ZeRO-3</li>
+              <li>Evaluation on 35+ Wolof tasks: perplexity, METEOR, accuracy, exact match, char edit distance, LLM-as-judge</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="paper-actions">
+          <a class="btn btn-primary" href="https://arxiv.org/abs/2610.20824" target="_blank" rel="noopener">arXiv abstract</a>
+          <a class="btn" href="https://arxiv.org/pdf/2610.20824" target="_blank" rel="noopener">PDF</a>
+          <a class="btn" href="https://huggingface.co/collections/Orange/wolof-lm" target="_blank" rel="noopener">Models on Hugging Face</a>
+          <button class="btn btn-ghost" id="copyBib" type="button">Copy BibTeX</button>
+        </div>
+        <pre class="bib" id="bib" hidden>@misc{lecorve2026wolofadapted,
+  title  = {Wolof-Adapted Industry-Ready Open-Weight Language Models},
+  author = {Lecorv{\'e}, Gw{\'e}nol{\'e} and Charlet, Delphine and Adam, Pierre and Behanzin, Floriane and Delphin-Poulat, Lionel and Heinecke, Johannes and Damnati, G{\'e}raldine and Kaytmaz, Pelin and Khaous, Nourredine and Kindji, Charbel and Maadi, Meriam and Mbaye, Abdoulaye and Perroux, Claire and Rousseau, Isma{\"e}l and Wad{\'e}, Papa S{\'e}ga and Xiberras, Gilles and Zhang, Olivier and Zitouni, Malek},
+  year   = {2026},
+  eprint = {2610.20824},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  url    = {https://arxiv.org/abs/2610.20824}
+}</pre>
+      </article>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="wrap reveal" id="experience">
+      <p class="eyebrow">Experience</p>
+      <h2>Where I’ve worked</h2>
+      <ol class="timeline">
+        <li class="spot">
+          <div class="when">Mar – Sep 2026<br /><span>Brittany, France</span></div>
+          <div class="what">
+            <h3>NLP / LLM Research Intern <a href="https://hellofuture.orange.com/" target="_blank" rel="noopener">Orange Innovation</a></h3>
+            <p class="sub">Tokenizer adaptation for adapting an LLM to a low-resource language (Wolof) · Supervisor: Johannes Heinecke</p>
+            <ul>
+              <li>Researched tokenizer adaptation and vocabulary extension for Wolof (~23M speakers) using Qwen2.5-7B.</li>
+              <li>Initialized new embedding rows with mean, random and CW2V methods, with GPU alignment to multiples of 256.</li>
+              <li>Designed CPT and instruction fine-tuning pipelines on an HPC cluster with DeepSpeed ZeRO-3, using Wolof corpora and instruction datasets.</li>
+              <li>Evaluated adapted Qwen2.5 variants on 35+ Wolof tasks (perplexity, METEOR, accuracy, exact match, char edit distance, LLM-as-judge).</li>
+              <li>Co-authored the arXiv paper; the 0.6B–14B models are public and piloted in customer care.</li>
+            </ul>
+            <div class="tags"><span>Qwen2.5</span><span>DeepSpeed ZeRO-3</span><span>HPC</span><span>CPT / SFT</span><span>Tokenizers</span><span>LLM-as-judge</span></div>
+          </div>
+        </li>
+        <li class="spot">
+          <div class="when">Jun – Aug 2025<br /><span>Tunis, Tunisia</span></div>
+          <div class="what">
+            <h3>Generative AI Engineer Intern <a href="https://www.axefinance.com/" target="_blank" rel="noopener">AXE Finance</a></h3>
+            <p class="sub">Structured data extraction from unstructured content via LLM schemas</p>
+            <ul>
+              <li>Deployed vision-language models (TinyLlama, Mistral-7B) and OCR with dynamic schema mapping and LLM prompting to extract data from financial documents — tables, forms, scanned text.</li>
+              <li>Cut processing time by 40% at 98% accuracy, shipped as clean Python/SQL APIs.</li>
+            </ul>
+            <div class="tags"><span>Vision-language models</span><span>OCR</span><span>Mistral-7B</span><span>Python</span><span>SQL</span></div>
+          </div>
+        </li>
+        <li class="spot">
+          <div class="when">Aug – Sep 2024<br /><span>Tunis, Tunisia</span></div>
+          <div class="what">
+            <h3>3D Computer Vision AI Intern <a href="https://www.linkedin.com/company/bim-in-touch/" target="_blank" rel="noopener">BIM IN TOUCH</a> <small>(Poulina Group)</small></h3>
+            <p class="sub">3D point cloud analysis for BIM automation</p>
+            <ul>
+              <li>Built a 3D deep learning pipeline on GCP (Vertex AI) over LiDAR point clouds, implementing and comparing PointNet++ and RandLA-Net for semantic segmentation of large-scale scenes in a Scan-to-BIM approach for industrial environments.</li>
+            </ul>
+            <div class="tags"><span>PointNet++</span><span>RandLA-Net</span><span>LiDAR</span><span>GCP Vertex AI</span></div>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="wrap reveal" id="projects">
+      <p class="eyebrow">Selected work</p>
+      <h2>AI projects</h2>
+      <div class="cards">
+        <article class="card glass spot">
+          <span class="num">01</span>
+          <h3>NLP application for therapeutic education in oncology</h3>
+          <p>A multi-step RAG architecture with Gemini: query processing, document retrieval, semantic validation and contextualized answer generation, with source traceability.</p>
+          <ul class="mini">
+            <li>FastAPI backend exposing the RAG pipeline as REST services</li>
+            <li>React frontend for answers and source consultation</li>
+            <li>ChromaDB vector search; SQLite for patient memory and conversation context</li>
+          </ul>
+          <div class="tags"><span>RAG</span><span>Gemini</span><span>FastAPI</span><span>React</span><span>ChromaDB</span></div>
+        </article>
+        <article class="card glass spot">
+          <span class="num">02</span>
+          <h3>Multi-modal pipeline for post-OCR correction</h3>
+          <p>Combines text embeddings, visual glyph information and a Transformer decoder to correct degraded documents through text/image fusion.</p>
+          <div class="metrics"><div><b>0.18</b><span>WER</span></div><div><b>0.10</b><span>CER</span></div></div>
+          <div class="tags"><span>Transformers</span><span>Multimodal</span><span>OCR</span><span>PyTorch</span></div>
+        </article>
+        <article class="card glass spot">
+          <span class="num">03</span>
+          <h3>Structured extraction from financial documents</h3>
+          <p>Vision-language models plus OCR with dynamic schema mapping turn tables, forms and scans into structured data.</p>
+          <div class="metrics"><div><b>−40%</b><span>processing time</span></div><div><b>98%</b><span>accuracy</span></div></div>
+          <div class="tags"><span>VLM</span><span>Mistral-7B</span><span>TinyLlama</span><span>Python / SQL</span></div>
+        </article>
+        <article class="card glass spot">
+          <span class="num">04</span>
+          <h3>Scan-to-BIM semantic segmentation</h3>
+          <p>PointNet++ versus RandLA-Net on large-scale LiDAR point clouds of industrial environments, trained on GCP Vertex AI.</p>
+          <div class="tags"><span>3D deep learning</span><span>PointNet++</span><span>RandLA-Net</span><span>Vertex AI</span></div>
+        </article>
+        <article class="card glass spot card-wide">
+          <span class="num">05</span>
+          <h3>Wolof-adapted language models</h3>
+          <p>The flagship: tokenizer and embedding adaptation, CPT/IT on HPC, and 35+ task evaluation — released as open-weight models from 0.6B to 14B.</p>
+          <div class="paper-actions">
+            <a class="btn btn-small btn-primary" href="#research">Read the paper</a>
+            <a class="btn btn-small" href="https://huggingface.co/collections/Orange/wolof-lm" target="_blank" rel="noopener">Hugging Face collection</a>
+            <a class="btn btn-small" href="https://github.com/malekzitouni" target="_blank" rel="noopener">More on GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="wrap reveal" id="skills">
+      <p class="eyebrow">Toolbox</p>
+      <h2>Technical skills</h2>
+      <div class="skills">
+        <div class="skill glass"><h4>Foundation models</h4><p class="tags big"><span>CPT</span><span>SFT</span><span>LoRA</span><span>RLHF</span><span>Tokenizer adaptation</span><span>Vocabulary extension</span><span>BPE</span><span>Embedding init</span></p></div>
+        <div class="skill glass"><h4>LLMs &amp; NLP</h4><p class="tags big"><span>BERT</span><span>GPT-4</span><span>LLaMA</span><span>Qwen</span><span>Hugging Face</span><span>LangChain</span><span>LangGraph</span><span>LlamaIndex</span><span>OpenAI API</span><span>RAG</span><span>Prompt engineering</span></p></div>
+        <div class="skill glass"><h4>Agentic AI</h4><p class="tags big"><span>Agentic workflows</span><span>Multi-agent systems</span><span>Tool use</span><span>Query rewriting</span><span>Multi-modal AI</span></p></div>
+        <div class="skill glass"><h4>Deep learning</h4><p class="tags big"><span>PyTorch (advanced)</span><span>TensorFlow</span><span>Keras</span><span>CNN</span><span>LSTM</span><span>Transformers</span><span>Attention</span></p></div>
+        <div class="skill glass"><h4>Distributed training</h4><p class="tags big"><span>DeepSpeed ZeRO-3</span><span>Multi-GPU / HPC</span><span>Model &amp; data parallelism</span><span>Docker</span></p></div>
+        <div class="skill glass"><h4>Evaluation</h4><p class="tags big"><span>Perplexity</span><span>METEOR</span><span>Exact match</span><span>Char edit distance</span><span>LLM-as-judge</span><span>Benchmarking</span></p></div>
+        <div class="skill glass"><h4>Computer vision</h4><p class="tags big"><span>OpenCV</span><span>YOLO</span><span>Object detection</span><span>3D point clouds</span><span>LiDAR</span><span>Semantic segmentation</span></p></div>
+        <div class="skill glass"><h4>Data &amp; vector stores</h4><p class="tags big"><span>Pandas</span><span>NumPy</span><span>Scikit-learn</span><span>XGBoost</span><span>ChromaDB</span><span>FAISS</span><span>Pinecone</span><span>Semantic search</span></p></div>
+        <div class="skill glass"><h4>Engineering &amp; cloud</h4><p class="tags big"><span>Python</span><span>C++</span><span>SQL</span><span>Bash</span><span>Git</span><span>AWS (EC2, S3)</span><span>GCP (Vertex AI)</span><span>Model deployment &amp; monitoring</span></p></div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="wrap reveal" id="education">
+      <p class="eyebrow">Background</p>
+      <h2>Education &amp; certification</h2>
+      <div class="edu">
+        <article class="glass spot">
+          <span class="chip chip-amber">October 2026</span>
+          <h3>National Engineering Degree in Applied Sciences and Technology</h3>
+          <p class="sub">INSAT, Tunisia · Master’s equivalent</p>
+          <p>Specialization: Machine Learning, Data Science &amp; Intelligent Automation.</p>
+        </article>
+        <article class="glass spot">
+          <span class="chip chip-amber">June 2021</span>
+          <h3>Baccalauréat — Experimental Sciences</h3>
+          <p class="sub">Final GPA 18.16/20 · Highest Honors</p>
+        </article>
+        <article class="glass spot">
+          <span class="chip chip-amber">Certification</span>
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <p class="sub">Amazon Web Services Training and Certification</p>
+          <p><a class="link" href="https://www.credly.com/badges/90079265-7de6-475b-b62c-6e127287670b/linked_in_profile" target="_blank" rel="noopener">Verify the badge →</a></p>
+        </article>
+        <article class="glass spot">
+          <span class="chip chip-amber">Languages</span>
+          <h3>Arabic · French · English</h3>
+          <p class="sub">Arabic native · French fluent (C1) · English B2, TOEIC 815/990</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact wrap reveal" id="contact">
+      <div class="contact-card glass">
+        <p class="eyebrow">Contact</p>
+        <h2>Let’s build something that ships.</h2>
+        <p>I’m looking for NLP / LLM engineering roles and open to relocation. References are available on request.</p>
+        <div class="paper-actions">
+          <a class="btn btn-primary" href="mailto:malek.zitouniinsat@gmail.com">malek.zitouniinsat@gmail.com</a>
+          <a class="btn" href="https://www.linkedin.com/in/malek-zitounii/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/malekzitouni" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-ghost" href="/assets/Malek_Zitouni_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© <span id="year">2026</span> Malek Zitouni · Tunis, Tunisia</span>
+    <a href="https://malekzitouni.github.io/PortfolioDesktop/" target="_blank" rel="noopener">Previous portfolio</a>
+  </footer>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>
